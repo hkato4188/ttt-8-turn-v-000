@@ -2,6 +2,7 @@
 
 #Define the board
 board = [" "," "," "," "," "," "," "," "," ",]
+require_relative "../lib/turn.rb"
 
 #Greet the user
 puts "Welcome to Tic Tac Toe!"

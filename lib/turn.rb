@@ -8,11 +8,6 @@ def display_board(board)
   puts " #{board[6]} | #{board[7]} | #{board[8]} "
 end
 
-#input_to_index converts user_input to an interger and subracts 1
-def input_to_index(position)
-  position.to_i - 1
-end
-
 #turn
 def turn(board)
   puts "Please enter 1-9:"
@@ -28,11 +23,14 @@ def turn(board)
   end
 end
 
-#validates is index is on the board and the position is not taken
+#input_to_index converts user_input to an interger and subracts 1
+def input_to_index(user_input)
+  user_input.to_i - 1
+end
+
+#validates if index is on the board and the position is not taken
 def valid_move?(board, index)
-  if index.between?(0,8) && !position_taken?(board, index)
-    true
-  end
+  index.between?(0,8) && !position_taken?(board, index)
 end
 
 #helper method to determine if position is taken
